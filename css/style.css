@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body.lock {
+  overflow-y: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+  font-family: "Nunito";
+}
+
+main {
+  font-family: "Montserrat";
+  flex: 0 0 100%;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 134px;
+  background: #000;
+  background: #97c7ff;
+  z-index: 50;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.header__body {
+  z-index: 20;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  color: #ffffff;
+}
+
+.header__burger {
+  transition: all 0.3s ease 0s;
+  display: none;
+  position: relative;
+  width: 32px;
+  height: 22px;
+}
+.header__burger span {
+  transition: all 0.2s ease 0s;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+}
+.header__burger:before, .header__burger:after {
+  transition: all 0.3s ease 0s;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  left: 0;
+}
+.header__burger:after {
+  top: 18px;
+}
+.header__burger:before {
+  top: 0;
+}
+
+.burger.active span {
+  width: 0;
+}
+.burger.active:before {
+  top: 9px;
+  transform: rotate(45deg);
+}
+.burger.active:after {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+.header__menu {
+  transition: all 0.3s ease 0s;
+  position: static;
+  height: 35px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  top: 70px;
+}
+
+.header__link {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+}
+
+main {
+  margin: 134px 0 0 0;
+}
+
+.main {
+  padding: 147px 0 224px;
+  position: relative;
+}
+
+.main__image {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.main__title {
+  max-width: 891px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.main__title span {
+  color: #97c7ff;
+}
+
+.main__desc {
+  margin: 21px 0 0 0;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffffff;
+}
+
+.work {
+  margin: 63px 0 0 0;
+}
+
+.title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 110%;
+  /* identical to box height */
+  color: #000000;
+}
+
+.work__body {
+  margin: 31px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.work__item {
+  flex: 0 0 25%;
+}
+
+.work__item-box {
+  width: 90%;
+  height: 208px;
+  padding: 16px 0 52px;
+  background: #ffffff;
+  border: 2px solid #97c7ff;
+  border-radius: 20px;
+}
+
+.work__item-image {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+
+.work__item-name {
+  margin: 12px 0 0 0;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  /* or 24px */
+  text-align: center;
+  /* blue */
+  color: #97c7ff;
+  text-align: center;
+}
+
+.work__item-desc {
+  margin: 20px auto 0;
+  text-align: center;
+  max-width: 195px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 120%;
+  /* or 19px */
+  text-align: center;
+  color: #000000;
+}
+
+.study {
+  margin: 67px 0 0 0;
+}
+
+.study__body {
+  margin: 31px 0 0 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.study__body:after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #97c7ff;
+  top: 58px;
+}
+
+.study__item {
+  flex: 0 0 25%;
+}
+
+.study__item-elipse {
+  width: 116px;
+  height: 116px;
+  padding: 41px 0;
+  text-align: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 34px;
+  /* identical to box height */
+  color: #97c7ff;
+  border-radius: 50%;
+  /* blue */
+  background: #fff;
+  border: 2px solid #97c7ff;
+}
+
+.study__item-desc {
+  margin: 21px 0 0 0;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  /* or 24px */
+  color: #000000;
+  max-width: 234px;
+}
+
+.course {
+  margin: 70px 0 0 0;
+}
+
+.course__body {
+  margin: 33px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.course__item {
+  flex: 0 0 30%;
+  background: #97c7ff;
+  border-radius: 20px;
+  padding: 35px 16px 41px;
+}
+
+.course__item-name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 43px;
+  /* identical to box height */
+  text-transform: capitalize;
+  color: #000000;
+}
+
+.course__item-desc {
+  margin: 25px 0 0 0;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+
+.news {
+  margin: 80px 0 0 0;
+}
+
+.news__body {
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news__item {
+  flex: 0 0 30%;
+  padding: 24px 21px 40px;
+  background: #ffffff;
+  /* blue */
+  border: 1px solid #97c7ff;
+  border-radius: 20px;
+}
+
+.news__item-date {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.news__item-title {
+  margin: 11px 0 0 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  /* blue */
+  color: #97c7ff;
+}
+
+.news__item-desc {
+  margin: 11px 0 0 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #727272;
+}
+
+footer {
+  margin: 120px 0 0 0;
+  padding: 24px 0 40px;
+  border-top: 2px solid #000;
+}
+
+.footer__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__item.links {
+  display: flex;
+  gap: 100px;
+}
+
+.footer_logo {
+  color: #000;
+}
+
+.footer__group {
+  margin: 36px 0 0 0;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+.footer__group .footer__link {
+  margin: 0;
+}
+
+.footer__link {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #000000;
+}
+
+.footer__group-1,
+.footer__group-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mask {
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+}
+.mask.active {
+  z-index: 40;
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */
